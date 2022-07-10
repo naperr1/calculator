@@ -1,0 +1,146 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: #12c2e9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Display */
+
+.calculator{
+    background: white;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.calculator-display{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px 5px 0px 0px;
+    justify-content: flex-end;
+}
+
+.calculator-display h1{
+    margin: 0;
+    padding: 25px;
+    font-size: 45px;
+    font-family: 'Lucida Sans', 'sans-serif';
+    font-weight: 100;
+    overflow-x: auto;
+}
+
+
+
+.operator{
+
+}
+
+.decimal{
+
+}
+
+.clear{
+
+}
+
+
+
+/*  Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Buttons */
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* grid-auto-rows: minmax(100px, auto); */
+    padding: 10px;
+}
+
+
+
+button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: silver;
+}
+
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    transform: translateY(1px);
+}
+
+button:focus{
+    outline: none;
+}
+
+.operator{
+    background: grey;
+    color: white;
+    font-size: 30px;
+}
+
+.clear{
+    background-color: rgb(233, 46, 46);
+    color: #fff;
+}
+
+.clear:hover{
+    filter: brightness(90%);
+}
+
+.equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4;
+    background: rgb(13, 206, 87);
+}
+
+/* Media */
+
+@media screen and (max-width: 600px) {
+    .calculator{
+        width: 95%;
+    }
+}
